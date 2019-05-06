@@ -28,7 +28,10 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
   </head>
+
+
   <body>
 
 	  <nav class="navbar navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -88,7 +91,7 @@
     		<div class="row d-flex align-items-center">
     			<div class="col-md-6 ftco-animate">
     				<h2 class="subheading"><span class="icon-calendar"></span> Next Discussion</h2>
-    				<h2><a href="#">Cross-border Regulation by a Centralized Body: Pros and Cons </a></h2>
+    				<h2><a href="#"><span id="nextTopic"> </span></a></h2>
     			</div>
     			<div class="col-md-6 pl-md-5 ftco-animate">
     				<div id="timer" class="d-flex mb-3">
@@ -188,15 +191,15 @@
   					<div class="img" style="background-image: url(images/current/2019/china.png);"></div>
   				</div>
   				<div class="col-md-6 py-4 text ftco-animate">
-  					<h2 class="mb-4"><a href="sermon.html">China's Crypto Ban</a></h2>
+  					<h2 class="mb-4"><a href="sermon.html"><span id="currentTopic"> </span></a></h2>
   					<div class="meta">
   						<p>
-	  						<span>Submitted By: <a href="#" class="ptr">CodeX Member 54</a></span>
+	  						<span>Submitted By: <a href="#" class="ptr" id="submittedBy"></a></span>
 	  						<span>Categories: <a href="#">Asia</a>, <a href="#">China</a></span>
 	  						<span>Schedule: <a href="#">Released: April 23 | Public Discussion: May 01-May 08 | Report: May 20</a></span>
   						</p>
   					</div>
-						<p>China's ban on cryptocurrencies has been in effect since late 2016. This brought huge economic ramifications both locally and worldwide. This week, we discuss this ban, and how we think China may move forward in the future in light of recent policy developments from other Asian nations.</p>
+						<p id="currentDescription"> </p>
 						<p class="mt-4 btn-customize">
 							<a href="#" class="btn btn-primary px-4 py-3 mr-md-2 popup-vimeo"><span class="icon-play"></span> Join the Conversation</a> <a href="#" class="btn btn-black px-4 py-3 ml-lg-2"><span class="icon-download"></span> Read Transcript</a>
 						</p>
@@ -659,13 +662,102 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy; RegTrax <script>document.write(new Date().getFullYear());</script> | All rights reserved
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- javascript for Google Sheets -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+  <script type='text/javascript'>
+
+    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1n61_3h5TGxiKNl7MdmUsLmZVxxIMqyN3GiScJ4yb2kc/edit?usp=sharing';
+
+    function init() {
+      Tabletop.init( { key: publicSpreadsheetUrl,
+                      callback: showInfo,
+                      simpleSheet: true } )
+    }
+
+    function showInfo(data, tabletop) {
+      //alert('Successfully processed!')
+      console.log(data);
+
+      var topic = JSON.stringify(data);
+
+      console.log(topic);
+
+      //Next Topic
+      var nextTopic = document.getElementById("nextTopic");
+      nextTopic.innerHTML = data[1].Topic;
+
+      //Current Topic
+      var currentTopic = document.getElementById("currentTopic");
+      currentTopic.innerHTML = data[0].Topic;
+
+      //Submitted By
+      var submittedBy = document.getElementById("submittedBy");
+      submittedBy.innerHTML = data[0].Submitted;
+
+      //current currentDescription
+      var currentDescription = document.getElementById("currentDescription");
+      currentDescription.innerHTML = data[0].Description;
+
+    }
+
+    window.addEventListener('DOMContentLoaded', init)
+
+  </script>
+
+
+
+  <script>
+
+   // ID of the Google Spreadsheet
+   var spreadsheetID = "1n61_3h5TGxiKNl7MdmUsLmZVxxIMqyN3GiScJ4yb2kc";
+
+   // Spreadsheet Var
+   var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+
+   $.getJSON(url, function(data) {
+
+    var entry = data.feed.entry;
+
+    $(entry).each(function(){
+      // Column name
+      $('.nextTopic').prepend(this.gsx$topic.$t);
+    });
+
+   });
+
+   $.getJSON(url, function(data) {
+
+    var entry = data.feed.entry;
+
+    $(entry).each(function(){
+      // Column name
+      $('.currentTopic').prepend(this.gsx$topic.$t);
+    });
+
+   });
+
+   $.getJSON(url, function(data) {
+
+    var entry = data.feed.entry;
+
+    $(entry).each(function(){
+      // Column name
+      $('.submittedBy').prepend(this.gsx$submittedBy.$t);
+    });
+
+   });
+
+
+  </script>
 
 
   <!-- loader -->
