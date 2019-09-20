@@ -8411,6 +8411,19 @@ h1, h2, h3, h4, h5,
     content: '';
     opacity: .8;
     background: #c7b198; }
+
+    .ftco-intro .overlay2 {
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      opacity: .8;
+      background: blue; }
+
+
   .ftco-intro h2.subheading {
     font-size: 20px;
     text-transform: uppercase;
@@ -9706,6 +9719,42 @@ textarea.form-control {
 
 
 /***** CUSTOM CSS ******/
+
+
+.headerMenu {
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.headerMenu.scrolled {
+  background: rgba(0,0,0,0.85);
+}
+
+.headerMenuContent {
+  color: white;
+  font-size: 35px;
+  width: 100%;
+  height: 149px;
+  -webkit-transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.headerMenu.scrolled .headerMenuContent {
+  height: 80px;
+}
 
 .flexCenter {
   display: flex;

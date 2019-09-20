@@ -123,6 +123,7 @@
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
 					navbar.addClass('scrolled');
+          //headerMenu.addClass('scrolled');
 				}
 			}
 			if (st < 150) {
@@ -295,7 +296,7 @@
 
   function makeTimer() {
 
-		var endTime = new Date("09 September 2019 00:00:00 GMT-07:00");			
+		var endTime = new Date("09 September 2019 00:00:00 GMT-07:00");
 		endTime = (Date.parse(endTime) / 1000);
 
 		var now = new Date();

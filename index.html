@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/ionicons.min.css">
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/bootstrap-min.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
 
@@ -42,15 +43,17 @@
 
   <body>
 
+
 	  <nav class="navbar navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container d-flex align-items-stretch">
 	    		<div class="col-3 d-flex align-items-center">
-			      <a class="navbar-brand" href="index.html">Reg<span>Trax</span></a>
+			      <!--<a class="navbar-brand" href="index.html">Reg<span>Trax</span></a>-->
+            <a class="navbar-brand" href="index.html">Reg<span>Trax</span></a>
 			    </div>
 					<div class="col-9 d-flex align-items-center text-right">
 		      	<ul class="ftco-social mt-2 mr-3">
 		          <li class="ftco-animate"><a href="#"><span class="fab fa-twitter"></span></a></li>
-		          <li class="ftco-animate"><a href="#"><span class="fab fa-youtube"></span></a></li>
+		          <li class="ftco-animate"><a href="#"><span class="fas fa-microphone-alt"></span></a></li>
 		          <li class="ftco-animate"><a href="https://law.stanford.edu/projects/blockchain-group/"><span class="fas fa-university"></span></a></li>
 		        </ul>
 
@@ -64,16 +67,33 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="about.html#rules" class="nav-link">Rules</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Upcoming Cycles</a></li>
 	          <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+
     <!-- END nav -->
+
+<!--
+    <div class="headerMenu">
+      <div class="row">
+        <div class="col">
+          <div class="headerMenuContent d-flex flex-row align-items-center justify-content-between">
+            <div class="mainLogo">
+              <a href="index.html">
+                <div> RegTrax </div>
+              </a>
+            </div>
+              <div>Menu Contents</div>
+              <div> end items   </div>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
 
     <div class="hero-wrap js-fullheight" style="background-image: url('images/main/cover.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -82,7 +102,7 @@
           <div class="col-md-10 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
           	<h1 class="mb-0">CodeX RegTrax</h1>
           	<h3 class="subheading mb-4 pb-1">Creating understanding and seeking common ground regarding decentralized technologies with regulators, technologists and academics</h3>
-          	<p><a href="#signUp" class="btn btn-primary py-3 px-4">Get Involved</a> <a href="https://stanford-jblp.pubpub.org/" class="btn btn-white py-3 px-4"><span class="far fa-sticky-note"></span> Past Discussions</a></p>
+          	<p><a href="#signUp" class="btn btn-primary py-3 px-4">Get Involved</a> <a href="https://stanford-jblp.pubpub.org/" class="btn btn-white py-3 px-4"><span class="far fa-sticky-note"></span> Archives</a></p>
             <div class="mouse">
 							<a href="#scrollDown" class="mouse-icon">
 								<div class="mouse-wheel" id="scrollDown"><span class="ion-ios-arrow-down"></span></div>
@@ -98,19 +118,32 @@
     	<div class="container">
     		<div class="row d-flex align-items-center">
     			<div class="col-md-6 ftco-animate">
-    				<h2 class="subheading"><span class="icon-calendar"></span> Current Discussion</h2>
-    				<h2><a href="#"><span id="nextTopic"> </span></a></h2>
+    				<h2 class="subheading"><span class="fas fa-pen-nib"></span> Currently Discussing</h2>
+    				<!--<h2><a href="#"><span id="nextTopic"> </span></a></h2>-->
+            <h2><a href="#"><span>Cross-Border Regulation by a Centralized Body: Pros and Cons</span></a></h2>
     			</div>
+
+          <div class="col-md-6 ftco-animate" style="background: rgb(105,105,105,.7);">
+    				<h2 class="subheading" style="color:white !important;"><span class="icon-calendar"></span> Upcoming Event</h2>
+    				<!--<h2><a href="#"><span id="nextTopic"> </span></a></h2>-->
+            <h2><a href="#"><span>Maxine Waters' Committee Holding Crypto Hearing with SEC (9/24)</span></a></h2>
+
+    			</div>
+          <!--
     			<div class="col-md-6 pl-md-5 ftco-animate">
+            <p><span><a href="#" class="btn btn-white px-4 py-2"> Upcoming Event</a></span></p>
+          -->
             <!--./js/main.js->makeTimer() -> ~line 296 -->
+            <!--
     				<div id="timer" class="d-flex mb-3">
 						  <div class="time" id="days"></div>
 						  <div class="time pl-4" id="hours"></div>
 						  <div class="time pl-4" id="minutes"></div>
 						  <div class="time pl-4" id="seconds"></div>
 						</div>
-						<p><span><a href="#signUp" class="btn btn-primary px-4 py-2">Join</a></span> <span><a href="#" class="btn btn-white px-4 py-2"> <span class="icon-download"></span> &nbsp; &nbsp; Read Transcript</a></span></p>
+						<p><span><a href="#signUp" class="btn btn-primary px-4 py-2">Rep. Waters Crypto Hearing with SEC</a></span></p>
     			</div>
+        -->
     		</div>
     	</div>
     </section>
@@ -219,24 +252,19 @@
 
     		<div class="row">
     			<div class="col-lg-12 ftco-animate" style="padding:25px; text-align: center;">
-            We believe that one of the major issues facing blockchain technology today is the lack of understanding between key stakeholders. To this end, RegTrax hosts a neutral, unbiased forum where policymakers, builders, researchers, and the public can come together to discuss and learn.
+            We believe that one of the major issues facing blockchain technology today is the lack of understanding between key stakeholders, which is in part a reflection of a true blockchain regulatory hub. To this end, RegTrax is collecting existing and proposed legislation from jurisdictions around the world, as well as hosting a neutral, unbiased forum where policymakers, builders, researchers, and the public can come together to discuss and learn.
           </div>
   <!--          One of the major issues with blockchain technology is the lack of common ground between any of the major stakeholders&mdash;at times, policymakers, builders, lawyers, and members of the public all seem to be speaking different languages. RegTrax is an attempt to seek understanding by creating a platform with room for all of these key groups, and catering to their individual sensitivities. Our solution is a quasi-open forum where we host neutral and unbiased discussions in an effort to close the metaphorical gap.<br>
             Each cycle covers three weeks: the first week is simply a research week, where we release the upcoming topic and give our members time to familiarize themselves with the issue if necessary, as well as allow the topic to percolate. The second week is the public discussion, where anyone in the world can ask or answer questions, offer their insights, or share their research. This allows the public to learn, to teach, and to shape the conversation as it evolves organically.<br>
             Ultimately, one important component of the RegTrax mission is carving out space for experts in the field to have transparent, sometimes controversial discussions about these difficult topics. This is a recognition of the realities of our modern world, in which stray tweets can crash markets and reactionary statements can end careers. We believe that one of the best ways forward for blockchain as a technology is to get thought leaders together, and allow them to speak off the record. To give them a sandbox where they can explore controversial ideas without fear of reprecussion. To this end, the last week of every cycle will be a "closed" discussion, where invited participants will collaborate in just such an environment. Of course, we belive that the <i>information</i> that comes out of these discussions belongs to the public, so after the week concludes, RegTrax will strip the transcripts of any identifying information and release a complete and faithful version to the public.
 -->
 
-
-    			<div class="col-lg-12 justify-content-center" style="padding:25px; width: 100%; display: flex; justify-content: center;">
-            <img src="./images/home/flow2.png" class="ftco-animate">
-    			</div>
-
           <div class="col-lg-12 ftco-animate" style="padding:25px; text-align: center;">
-            Each RegTrax cycle is 3 weeks, with the first week set aside for discussion and research, the second for public discussion and comment, and the third for a "closed" discussion among invited thought leaders, where they can share controversial opinions and explore incomplete theories. After each "closed" session concludes, RegTrax will de-identify the participants and information, and release a faithful transcript to the public.
+            Feel free to explore our regulatory repository, jump in on one of our discussions, or help us keep an eye out for new developments to track. Our information is 100% open-source, so please consider <a href="#">contributing</a> if we have any gaps in our knowledge.
           </div>
 
           <div class="col-lg-12 ftco-animate" style="padding:25px; text-align: center;">
-            <a href="#" class="btn btn-black px-4 py-3 ml-lg-2">Read More</a>
+            <a href="jx.html" class="btn btn-black px-4 py-3 ml-lg-2">Explore Jurisdictions</a>
 
           </div>
 
@@ -310,8 +338,8 @@
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-12 text-center heading-section heading-section-light ftco-animate">
-            <h2 class="mb-2"><span class="px-4">Next Public Discussion</span></h2>
-            <span class="subheading">July 08, 2019 - July 15, 2019</span>
+            <h2 class="mb-2"><span class="px-4">Latest Media</span></h2>
+            <span class="subheading">September 19th, 2019</span>
           </div>
         </div>
     		<div class="row d-flex sermon-wrap">
@@ -319,17 +347,25 @@
   					<div class="img" style="background-image: url(images/current/2019/china.png);"></div>
   				</div>
   				<div class="col-md-6 py-4 text ftco-animate">
-  					<h2 class="mb-4"><a href="sermon.html"><span id="currentTopic"> </span></a></h2>
+  					<!--<h2 class="mb-4"><a href="#"><span id="currentTopic"> </span></a></h2-->
+            <h2 class="mb-4"><a href="#"><span>"China's Ban on Cryptocurency"</span></a></h2>
   					<div class="meta">
   						<p>
-	  						<span>Submitted By: <a href="#" class="ptr" id="submittedBy"></a></span>
-	  						<span>Categories: <a href="#">Asia</a>, <a href="#">China</a></span>
-	  						<span>Schedule: <a href="#">Release: July 01 | Public Discussion: July 01-July 08 | Report: July 31</a></span>
+	  						<!--<span>Submitted By: <a href="#" class="ptr" id="submittedBy"></a></span>-->
+                <span>With special guest: <a href="#" class="ptr">Isaac Newton</a></span>
+	  						<!--<span>Schedule: <a href="#">Release: July 01 | Public Discussion: July 01-July 08 | Report: July 31</a></span>-->
   						</p>
   					</div>
-						<p id="currentDescription"> </p>
+						<!--<p id="currentDescription"> </p>-->
+
+            <script src="https://www.buzzsprout.com/607291.js?player=small" type="text/javascript" charset="utf-8"></script>
+
+            <p>In this month's episode, Mr. Newton discusses China's attempts to ban cryptocurrencies, and explores whether or not they have been successful&mdash;and what may come next...</p>
+
+            <span>Categories: <a href="#">Asia</a>, <a href="#">China</a></span>
+
 						<p class="mt-4 btn-customize">
-							<a href="#" class="btn btn-black px-4 py-3 ml-lg-2"><span><i class="fas fa-chevron-circle-right"></i></span> &nbsp; &nbsp; More Information</a>
+							<a href="http://www.regtrax.buzzsprout.com" class="btn btn-black px-4 py-3 ml-lg-2"><span><i class="fas fa-chevron-circle-right"></i></span> &nbsp; &nbsp; Past Episodes</a>
 						</p>
   				</div>
     		</div>
@@ -375,10 +411,10 @@
 		            <div class="block-18 text-center py-4 bg-light mb-4">
 		              <div class="text">
 		              	<div class="icon d-flex justify-content-center align-items-center">
-		              		<span class="fas fa-user-tie"></span>
+		              		<span class="fas fa-atlas"></span>
 		              	</div>
-		                <strong class="number" data-number="15">0</strong>
-		                <span>Core Experts</span>
+		                <strong class="number">Legal</strong>
+		                <span>Repository</span>
 		              </div>
 		            </div>
 		          </div>
@@ -388,7 +424,7 @@
 		              	<div class="icon d-flex justify-content-center align-items-center">
 		              		<span class="far fa-comments"></span>
 		              	</div>
-		                <strong class="number">Monthly</strong>
+		                <strong class="number">Stakeholder</strong>
 		                <span>Discussions</span>
 		              </div>
 		            </div>
@@ -399,8 +435,8 @@
 		              	<div class="icon d-flex justify-content-center align-items-center">
 		              		<span class="fas fa-map-marked-alt"></span>
 		              	</div>
-		                <strong class="number" data-number="9">0</strong>
-		                <span>Countries</span>
+		                <strong class="number" data-number="19">0</strong>
+		                <span>Jurisdictions</span>
 		              </div>
 		            </div>
 		          </div>
@@ -675,8 +711,6 @@
     </section>
 
 
-
-
     <div id="signUp"></div>
 
 <!--
@@ -765,7 +799,7 @@
               <p>RegTrax seeks to provide a space for regulators, policymakers, technology stakeholders and academics to engage in open, thoughtful discussions about the current and future state of blockchain regulation</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="fab fa-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="fab fa-youtube"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fas fa-microphone-alt"></span></a></li>
                 <li class="ftco-animate"><a href="https://law.stanford.edu/projects/blockchain-group/"><span class="fas fa-university"></span></a></li>
               </ul>
             </div>
@@ -803,7 +837,7 @@
                 </p>
                 <h4>CodeX</h4>
                 <p class="pl-3">
-                  <span>General Meeting<br><i>September 5; 14:45-16:00 PST</i></span>
+                  <span>General Meeting<br><i>October 3 ; 14:45-16:00 PST</i></span>
               	</p>
               </div>
             </div>
@@ -811,10 +845,8 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy; RegTrax <script>document.write(new Date().getFullYear());</script> | All rights reserved
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>
+              Copyright &copy; RegTrax <script>document.write(new Date().getFullYear());</script> | All rights reserved</p>
           </div>
         </div>
       </div>
@@ -930,6 +962,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/menutest.js"></script>
 
   </body>
 </html>
